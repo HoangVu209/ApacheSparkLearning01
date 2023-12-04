@@ -3,6 +3,10 @@ import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.SparkSession;
 
+import java.util.Properties;
+
+import static org.apache.spark.sql.functions.concat;
+import static org.apache.spark.sql.functions.lit;
 public class Ch02MentalModel {
     public static void main(String[] args){
         Ch02MentalModel chapt02 = new Ch02MentalModel();
@@ -45,7 +49,6 @@ public class Ch02MentalModel {
                 .jdbc(conn.getConnUrl(), "customer", prop);
 
         System.out.println("Process Complete");
-
 
     }
 
